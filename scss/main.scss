@@ -1,0 +1,342 @@
+@import "config";
+@import "menu";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background();
+  background: $primary-color;
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  &.lg-heading {
+    font-size: 5rem;
+  }
+  &.sm-heading {
+    padding: 0.2rem 1rem;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  grid-area: sm-heading;
+  color: $secondary-color;
+}
+
+main {
+  padding: 2.5rem;
+  min-height: calc(100vh - 60px);
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "img img img img"
+    "lg lg lg lg"
+    "sm sm sm sm"
+    "icons icons icons icons"
+    "rec rec rec rec"
+    "job1 job2 job3 job4";
+  grid-template-columns: repeat(4, 1fr);
+
+  .icons {
+    margin: auto;
+    grid-area: icons;
+    // margin-bottom: 2%;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  .recent {
+    grid-area: rec;
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+
+  .lg-heading {
+    grid-area: lg;
+    margin: 0;
+    line-height: 0.75;
+  }
+
+  .sm-heading {
+    grid-area: sm;
+  }
+  .bio-image {
+    display: block;
+    grid-area: img;
+    margin: auto;
+    margin-bottom: 1%;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+    width: 12.5%;
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .job {
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+    font-size: 1rem;
+    .content {
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    &:hover {
+      border-bottom: black 5px solid;
+      .content {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    h3 {
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .job-1 {
+    grid-area: job1;
+    background: url(/images/recent/Boxing-pro1.png);
+
+    &:hover {
+      background: url(/images/recent/Boxing-pro1.png);
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.75) 100%
+        ),
+        url(/images/recent/Boxing-pro1.png);
+      background-size: cover;
+    }
+    background-size: cover;
+  }
+
+  .job-2 {
+    grid-area: job2;
+    background: url(/images/recent/Sitadel.png);
+
+    &:hover {
+      background: url(/images/recent/Sitadel.png);
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.75) 100%
+        ),
+        url(/images/recent/Sitadel.png);
+      background-size: cover;
+    }
+    background-size: cover;
+  }
+
+  .job-3 {
+    grid-area: job3;
+    background: url(/images/recent/game.png);
+
+    &:hover {
+      background: url(/images/recent/game.png);
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.75) 100%
+        ),
+        url(/images/recent/game.png);
+      background-size: cover;
+    }
+    background-size: cover;
+  }
+
+  .job-4 {
+    grid-area: job4;
+    background: url(/images/recent/bti.png);
+
+    &:hover {
+      background: url(/images/recent/bti.png);
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.75) 100%
+        ),
+        url(/images/recent/bti.png);
+      background-size: cover;
+    }
+    background-size: cover;
+  }
+
+  h6 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 5%;
+  }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.25rem;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+
+  .job-1 {
+    grid-area: job1;
+    font-size: 1rem;
+  }
+
+  .job-2 {
+    grid-area: job2;
+    font-size: 1rem;
+  }
+
+  .job-3 {
+    grid-area: job3;
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: #fff 3px solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1rem;
+    border: 2px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      // padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: #333;
+      span {
+        color: #333;
+      }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: #444;
+    @include easeOut;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: #fff;
+  height: 60px;
+}
+
+@import "mobile";
