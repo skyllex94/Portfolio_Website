@@ -218,10 +218,11 @@ main {
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
-    "lg lg lg"
-    "sm sm sm"
-    "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
+    "lg lg lg lg"
+    "sm sm sm sm"
+    "item1 item2 item3 item4"
+    "item5";
+  grid-template-columns: repeat(4, 1fr);
 
   img {
     width: 100%;
@@ -234,11 +235,12 @@ main {
     }
   }
 
-  .lg-heading {
+  h1 {
     grid-area: lg;
+    margin-top: 5%;
   }
 
-  .sm-heading {
+  h2 {
     grid-area: sm;
   }
 }
