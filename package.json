@@ -16,5 +16,13 @@
     "touch-for-windows": "^1.0.0"
   },
   "devDependencies": {},
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyllex94/Portfolio_Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skyllex94/Portfolio_Website/issues"
+  },
+  "homepage": "https://github.com/skyllex94/Portfolio_Website#readme"
 }
