@@ -62,7 +62,6 @@ main {
   .icons {
     margin: auto;
     grid-area: icons;
-    // margin-bottom: 2%;
     a {
       padding: 0.4rem;
       &:hover {
@@ -215,55 +214,13 @@ main {
   }
 }
 
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
-
-  .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: $secondary-color 3px solid;
-  }
-
-  .bio {
-    grid-area: bio;
-    font-size: 1.25rem;
-  }
-
-  .job {
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
-  }
-
-  .job-1 {
-    grid-area: job1;
-    font-size: 1rem;
-  }
-
-  .job-2 {
-    grid-area: job2;
-    font-size: 1rem;
-  }
-
-  .job-3 {
-    grid-area: job3;
-    font-size: 1rem;
-  }
-
-  h6 {
-    font-size: 1rem;
-  }
-}
-
 .projects {
   display: grid;
   grid-gap: 20px;
+  grid-template-areas:
+    "lg lg lg"
+    "sm sm sm"
+    "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
   img {
@@ -275,6 +232,14 @@ main {
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+
+  .lg-heading {
+    grid-area: lg;
+  }
+
+  .sm-heading {
+    grid-area: sm;
   }
 }
 
