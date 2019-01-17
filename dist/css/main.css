@@ -159,7 +159,7 @@ main {
     margin-bottom: 1%;
     border-radius: 50%;
     border: #eece1a 3px solid;
-    width: 12.5%; }
+    width: 175px; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -340,20 +340,10 @@ main {
       width: 150px;
       height: 150px;
       align-items: center; }
-  .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; }
-    .about-info .bio-image {
-      width: 150px; }
-    .about-info .bio {
-      font-size: 1rem; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh;
-    grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: 1fr; }
   main {
