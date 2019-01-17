@@ -8,12 +8,24 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  main {
+  }
 }
 
 @include mediaMed {
   main {
-    align-items: center;
     text-align: center;
+
+    grid-template-areas:
+      "img img"
+      "lg lg"
+      "sm sm"
+      "icons icons"
+      "rec rec"
+      "job1 job2"
+      "job3 job4";
+    grid-template-columns: repeat(2, 1fr);
 
     .lg-heading {
       line-height: 1;
@@ -81,5 +93,19 @@
   }
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  main {
+    grid-template-areas:
+      "img"
+      "lg"
+      "sm"
+      "icons"
+      "rec"
+      "job1"
+      "job2"
+      "job3"
+      "job4";
+    grid-template-columns: repeat(1, 1fr);
   }
 }
