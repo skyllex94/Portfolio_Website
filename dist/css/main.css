@@ -220,8 +220,8 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 20px;
-  grid-template-areas: "lg lg lg lg" "sm sm sm sm" "item1 item2 item3 item4" "item5";
+  grid-gap: 50px;
+  grid-template-areas: "lg lg lg lg" "sm sm sm sm" "item1 item2 item3 item4";
   grid-template-columns: repeat(4, 1fr); }
   .projects img {
     width: 100%;
@@ -235,6 +235,16 @@ main {
     margin-top: 5%; }
   .projects h2 {
     grid-area: sm; }
+  .projects .proj {
+    padding: 20px; }
+    .projects .proj .item1 {
+      grid-area: item1; }
+    .projects .proj .item2 {
+      grid-area: item2; }
+    .projects .proj .item3 {
+      grid-area: item3; }
+    .projects .proj .item4 {
+      grid-area: item4; }
 
 .boxes {
   display: flex;
@@ -279,10 +289,6 @@ main {
   background: #2b2b2b;
   color: #fff;
   height: 60px; }
-
-@media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {

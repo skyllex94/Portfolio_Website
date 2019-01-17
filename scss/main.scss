@@ -216,12 +216,11 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 50px;
   grid-template-areas:
     "lg lg lg lg"
     "sm sm sm sm"
-    "item1 item2 item3 item4"
-    "item5";
+    "item1 item2 item3 item4";
   grid-template-columns: repeat(4, 1fr);
 
   img {
@@ -243,6 +242,25 @@ main {
   h2 {
     grid-area: sm;
   }
+
+  .proj {
+    padding: 20px;
+    .item1 {
+      grid-area: item1;
+    }
+
+    .item2 {
+      grid-area: item2;
+    }
+
+    .item3 {
+      grid-area: item3;
+    }
+
+    .item4 {
+      grid-area: item4;
+    }
+  }
 }
 
 .boxes {
@@ -259,7 +277,6 @@ main {
     @include easeOut;
 
     &:hover {
-      // padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: #333;
       span {
