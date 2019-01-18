@@ -219,15 +219,22 @@ main {
   grid-gap: 20px;
   grid-template-areas:
     "lg lg lg lg"
-    "proj1 proj2 proj3 proj4";
-  grid-template-columns: repeat(4, 1fr);
+    "smweb smweb smweb smweb"
+    "proj1 proj2 proj3 proj4"
+    "sm sm sm sm"
+    "proj5 e e e"
+    "smsoft smsoft smsoft smsoft"
+    "proj6 proj7 proj7 proj7";
+  grid-template-columns: repeat(auto-fill(4, 1fr));
   padding: 2.5rem;
+
   img {
     width: 100%;
+    height: 14rem;
     border: #fff 3px solid;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.75;
       border-color: $secondary-color;
       @include easeOut;
     }
@@ -236,11 +243,30 @@ main {
   h1 {
     grid-area: lg;
     margin: 2.5% 0;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+  }
+
+  .sm-heading_mob {
+    grid-area: sm;
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .sm-heading_soft {
+    grid-area: smsoft;
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .sm-heading_web {
+    grid-area: smweb;
+    text-align: left;
+    font-size: 2rem;
   }
 
   .proj1 {
     grid-area: proj1;
-    align-self: center;
   }
 
   .proj2 {
@@ -253,6 +279,18 @@ main {
 
   .proj4 {
     grid-area: proj4;
+  }
+
+  .proj5 {
+    grid-area: proj5;
+  }
+
+  .proj6 {
+    grid-area: proj6;
+  }
+
+  .proj7 {
+    grid-area: proj7;
   }
 }
 
