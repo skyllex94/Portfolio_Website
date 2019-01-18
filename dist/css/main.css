@@ -221,7 +221,7 @@ main {
 .projects {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "lg lg lg lg" "smweb smweb smweb smweb" "proj1 proj2 proj3 proj4" "sm sm sm sm" "proj5 e e e" "smsoft smsoft smsoft smsoft" "proj6 proj7 proj7 proj7";
+  grid-template-areas: "lg lg lg lg" "smweb smweb smweb smweb" "proj1 proj2 proj3 proj4" "sm sm sm sm" "proj5 e e e" "smsoft smsoft smsoft smsoft" "proj6 proj7 proj8 proj9";
   grid-template-columns: repeat(auto-fill(4, 1fr));
   padding: 2.5rem; }
   .projects img {
@@ -263,6 +263,10 @@ main {
     grid-area: proj6; }
   .projects .proj7 {
     grid-area: proj7; }
+  .projects .proj8 {
+    grid-area: proj8; }
+  .projects .proj9 {
+    grid-area: proj9; }
 
 .boxes {
   display: flex;
