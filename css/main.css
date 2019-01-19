@@ -1,0 +1,356 @@
+.menu-btn {
+  position: fixed;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 225px;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-item.current > a {
+    color: #eece1a; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #eece1a; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../../images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(68, 68, 68, 0.9);
+      z-index: -1; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  text-align: center; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 3rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    padding: 0.2rem 1rem; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  grid-area: sm-heading;
+  color: #eece1a; }
+
+main {
+  padding: 2.5rem;
+  min-height: calc(100vh - 60px);
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "img img img img" "lg lg lg lg" "sm sm sm sm" "icons icons icons icons" "rec rec rec rec" "job1 job2 job3 job4";
+  grid-template-columns: repeat(4, 1fr); }
+  main .icons {
+    margin: auto;
+    grid-area: icons; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #eece1a;
+        transition: all 0.5s ease-out; }
+  main .recent {
+    grid-area: rec; }
+    main .recent hr {
+      border: 0;
+      height: 1.5px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
+  main .lg-heading {
+    grid-area: lg;
+    margin: 0;
+    line-height: 0.75; }
+  main .sm-heading {
+    grid-area: sm; }
+  main .bio-image {
+    display: block;
+    grid-area: img;
+    margin: auto;
+    margin-bottom: 1%;
+    border-radius: 50%;
+    border: #eece1a 3px solid;
+    width: 175px; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      text-align: center; }
+  main .job {
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid;
+    font-size: 1rem; }
+    main .job .content {
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear; }
+    main .job:hover {
+      border-bottom: black 5px solid; }
+      main .job:hover .content {
+        visibility: visible;
+        opacity: 1; }
+    main .job h3 {
+      text-transform: uppercase;
+      margin-top: 10px; }
+    main .job p {
+      text-align: center; }
+  main .job-1 {
+    grid-area: job1;
+    background: url(/images/recent/Boxing-pro1.png);
+    background-size: cover; }
+    main .job-1:hover {
+      background: url(/images/recent/Boxing-pro1.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/Boxing-pro1.png);
+      background-size: cover; }
+  main .job-2 {
+    grid-area: job2;
+    background: url(/images/recent/Sitadel.png);
+    background-size: cover; }
+    main .job-2:hover {
+      background: url(/images/recent/Sitadel.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/Sitadel.png);
+      background-size: cover; }
+  main .job-3 {
+    grid-area: job3;
+    background: url(/images/recent/game.png);
+    background-size: cover; }
+    main .job-3:hover {
+      background: url(/images/recent/game.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/game.png);
+      background-size: cover; }
+  main .job-4 {
+    grid-area: job4;
+    background: url(/images/recent/bti.png);
+    background-size: cover; }
+    main .job-4:hover {
+      background: url(/images/recent/bti.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/bti.png);
+      background-size: cover; }
+  main h6 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 5%; }
+
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  padding: 2.5rem; }
+  .projects img {
+    width: 100%;
+    height: 14rem;
+    border: #fff 3px solid; }
+    .projects img:hover {
+      opacity: 0.75;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
+  .projects hr {
+    border: 0;
+    height: 2.5px;
+    background-image: linear-gradient(to right, #eece1a, #eece1a, rgba(168, 167, 167, 0));
+    width: 50vw;
+    margin: 10px 0 10px 0; }
+  .projects h1 {
+    grid-area: lg;
+    margin: 2.5% 0;
+    text-transform: uppercase; }
+  .projects .sm-heading_mob {
+    grid-area: sm;
+    text-align: left;
+    font-size: 1.5rem; }
+  .projects .sm-heading_soft {
+    grid-area: smsoft;
+    text-align: left;
+    font-size: 1.5rem; }
+  .projects .sm-heading_web {
+    grid-area: smweb;
+    text-align: left;
+    font-size: 1.5rem; }
+  .projects .proj1 {
+    grid-area: proj1; }
+  .projects .proj2 {
+    grid-area: proj2; }
+  .projects .proj3 {
+    grid-area: proj3; }
+  .projects .proj4 {
+    grid-area: proj4; }
+  .projects .proj5 {
+    grid-area: proj5; }
+  .projects .proj6 {
+    grid-area: proj6; }
+  .projects .proj7 {
+    grid-area: proj7; }
+  .projects .proj8 {
+    grid-area: proj8; }
+  .projects .proj9 {
+    grid-area: proj9; }
+
+.contact {
+  min-height: calc(100vh - 60px); }
+  .contact .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1rem; }
+    .contact .boxes div {
+      font-size: 1rem;
+      border: 2px #fff solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      transition: all 0.5s ease-out; }
+      .contact .boxes div:hover {
+        background: #eece1a;
+        color: #333; }
+        .contact .boxes div:hover span {
+          color: #333; }
+  .contact .lg-heading {
+    margin: 5% 0 1% 0;
+    text-transform: uppercase; }
+  .contact .sm-heading {
+    margin-bottom: 50px; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #eece1a;
+    color: #444;
+    transition: all 0.5s ease-out; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+  .btn-light:hover {
+    color: #fff; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-areas: "lg lg lg lg" "smweb smweb smweb smweb" "proj1 proj2 proj3 proj4" "sm sm sm sm" "proj5 e e e" "smsoft smsoft smsoft smsoft" "proj6 proj7 proj8 proj9";
+    grid-template-columns: repeat(auto-fill(4, 1fr)); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-areas: "lg lg lg" "smweb smweb smweb" "proj1 proj2 proj3" "proj4 a a " "sm sm sm" "proj5 w w" "smsoft smsoft smsoft" "proj6 proj7 proj8" "proj9 e e";
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    text-align: center;
+    grid-template-areas: "img img" "lg lg" "sm sm" "icons icons" "rec rec" "job1 job2" "job3 job4";
+    grid-template-columns: repeat(2, 1fr); }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1 rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 100vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 20px; }
+  .projects {
+    grid-template-areas: "lg lg " "smweb smweb " "proj1 proj2" "proj3 proj4" "sm sm" "proj5 e" "smsoft smsoft" "proj6 proj7" "proj8 proj9";
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  .projects {
+    grid-template-areas: "lg " "smweb " "proj1" "proj2" "proj3" "proj4" "sm" "proj5" "smsoft" "proj6" "proj7" "proj8" "proj9";
+    grid-template-columns: repeat(1, 1fr); }
+  main {
+    grid-template-areas: "img" "lg" "sm" "icons" "rec" "job1" "job2" "job3" "job4";
+    grid-template-columns: repeat(1, 1fr); }
+  .boxes {
+    width: 80%;
+    margin: auto; } }
