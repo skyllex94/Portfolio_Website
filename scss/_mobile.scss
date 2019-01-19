@@ -1,12 +1,31 @@
 @include mediaXL {
+  .projects {
+    grid-template-areas:
+      "lg lg lg lg"
+      "smweb smweb smweb smweb"
+      "proj1 proj2 proj3 proj4"
+      "sm sm sm sm"
+      "proj5 e e e"
+      "smsoft smsoft smsoft smsoft"
+      "proj6 proj7 proj8 proj9";
+
+    grid-template-columns: repeat(auto-fill(4, 1fr));
+  }
 }
 
 @include mediaLg {
   .projects {
+    grid-template-areas:
+      "lg lg lg"
+      "smweb smweb smweb"
+      "proj1 proj2 proj3"
+      "proj4 a a "
+      "sm sm sm"
+      "proj5 w w"
+      "smsoft smsoft smsoft"
+      "proj6 proj7 proj8"
+      "proj9 e e";
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  main {
   }
 }
 
@@ -41,32 +60,43 @@
   }
 
   .menu-nav {
-    height: 65vh;
+    height: 100vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 20px;
   }
 
-  .menu-branding {
-    height: 35vh;
-    transform: translate3d(100%, 0, 0);
-
-    .portrait {
-      background: url(../../images/portrait-sm.png);
-      border-radius: 150px;
-      width: 150px;
-      height: 150px;
-      align-items: center;
-    }
-  }
-
   .projects {
+    grid-template-areas:
+      "lg lg "
+      "smweb smweb "
+      "proj1 proj2"
+      "proj3 proj4"
+      "sm sm"
+      "proj5 e"
+      "smsoft smsoft"
+      "proj6 proj7"
+      "proj8 proj9";
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @include mediaSm {
   .projects {
-    grid-template-columns: 1fr;
+    grid-template-areas:
+      "lg "
+      "smweb "
+      "proj1"
+      "proj2"
+      "proj3"
+      "proj4"
+      "sm"
+      "proj5"
+      "smsoft"
+      "proj6"
+      "proj7"
+      "proj8"
+      "proj9";
+    grid-template-columns: repeat(1, 1fr);
   }
 
   main {
@@ -81,5 +111,10 @@
       "job3"
       "job4";
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .boxes {
+    width: 80%;
+    margin: auto;
   }
 }

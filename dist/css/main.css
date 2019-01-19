@@ -1,5 +1,5 @@
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   right: 35px;
   top: 35px;
@@ -106,7 +106,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 5rem; }
+    font-size: 3rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -221,8 +221,6 @@ main {
 .projects {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "lg lg lg lg" "smweb smweb smweb smweb" "proj1 proj2 proj3 proj4" "sm sm sm sm" "proj5 e e e" "smsoft smsoft smsoft smsoft" "proj6 proj7 proj8 proj9";
-  grid-template-columns: repeat(auto-fill(4, 1fr));
   padding: 2.5rem; }
   .projects img {
     width: 100%;
@@ -232,23 +230,28 @@ main {
       opacity: 0.75;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+  .projects hr {
+    border: 0;
+    height: 2.5px;
+    background-image: linear-gradient(to right, #eece1a, #eece1a, rgba(168, 167, 167, 0));
+    width: 50vw;
+    margin: 10px 0 10px 0; }
   .projects h1 {
     grid-area: lg;
     margin: 2.5% 0;
-    font-size: 3.5rem;
     text-transform: uppercase; }
   .projects .sm-heading_mob {
     grid-area: sm;
     text-align: left;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   .projects .sm-heading_soft {
     grid-area: smsoft;
     text-align: left;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   .projects .sm-heading_web {
     grid-area: smweb;
     text-align: left;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   .projects .proj1 {
     grid-area: proj1; }
   .projects .proj2 {
@@ -268,22 +271,29 @@ main {
   .projects .proj9 {
     grid-area: proj9; }
 
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 1rem;
-    border: 2px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out; }
-    .boxes div:hover {
-      background: #eece1a;
-      color: #333; }
-      .boxes div:hover span {
+.contact {
+  min-height: calc(100vh - 60px); }
+  .contact .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1rem; }
+    .contact .boxes div {
+      font-size: 1rem;
+      border: 2px #fff solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      transition: all 0.5s ease-out; }
+      .contact .boxes div:hover {
+        background: #eece1a;
         color: #333; }
+        .contact .boxes div:hover span {
+          color: #333; }
+  .contact .lg-heading {
+    margin: 5% 0 1% 0;
+    text-transform: uppercase; }
+  .contact .sm-heading {
+    margin-bottom: 50px; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -312,8 +322,14 @@ main {
   color: #fff;
   height: 60px; }
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-areas: "lg lg lg lg" "smweb smweb smweb smweb" "proj1 proj2 proj3 proj4" "sm sm sm sm" "proj5 e e e" "smsoft smsoft smsoft smsoft" "proj6 proj7 proj8 proj9";
+    grid-template-columns: repeat(auto-fill(4, 1fr)); } }
+
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
+    grid-template-areas: "lg lg lg" "smweb smweb smweb" "proj1 proj2 proj3" "proj4 a a " "sm sm sm" "proj5 w w" "smsoft smsoft smsoft" "proj6 proj7 proj8" "proj9 e e";
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
@@ -333,24 +349,20 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 65vh;
+    height: 100vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 20px; }
-  .menu-branding {
-    height: 35vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url(../../images/portrait-sm.png);
-      border-radius: 150px;
-      width: 150px;
-      height: 150px;
-      align-items: center; }
   .projects {
+    grid-template-areas: "lg lg " "smweb smweb " "proj1 proj2" "proj3 proj4" "sm sm" "proj5 e" "smsoft smsoft" "proj6 proj7" "proj8 proj9";
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   .projects {
-    grid-template-columns: 1fr; }
+    grid-template-areas: "lg " "smweb " "proj1" "proj2" "proj3" "proj4" "sm" "proj5" "smsoft" "proj6" "proj7" "proj8" "proj9";
+    grid-template-columns: repeat(1, 1fr); }
   main {
     grid-template-areas: "img" "lg" "sm" "icons" "rec" "job1" "job2" "job3" "job4";
-    grid-template-columns: repeat(1, 1fr); } }
+    grid-template-columns: repeat(1, 1fr); }
+  .boxes {
+    width: 80%;
+    margin: auto; } }
