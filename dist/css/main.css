@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     float: right;
-    width: 15%;
+    width: 225px;
     height: 100vh;
     overflow: hidden; }
   .menu-nav {
@@ -46,18 +46,6 @@
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
-  .menu-branding {
-    background: #444;
-    transform: translate3d(0, 100%, 0);
-    transition: all 0.5s ease-out; }
-    .menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../../images/portrait.jpg");
-      border-radius: 50%;
-      border: solid 3px #eece1a; }
   .menu .nav-item.current > a {
     color: #eece1a; }
   .menu .nav-link {
