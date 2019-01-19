@@ -171,35 +171,35 @@ main {
       text-align: center; }
   main .job-1 {
     grid-area: job1;
-    background: url(/dist/images/recent/Boxing-pro1.png);
+    background: url(/images/recent/Boxing-pro1.png);
     background-size: cover; }
     main .job-1:hover {
-      background: url(dist/images/recent/Boxing-pro1.png);
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/dist/images/recent/Boxing-pro1.png);
+      background: url(/images/recent/Boxing-pro1.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/Boxing-pro1.png);
       background-size: cover; }
   main .job-2 {
     grid-area: job2;
-    background: url(/dist/images/recent/Sitadel.png);
+    background: url(/images/recent/Sitadel.png);
     background-size: cover; }
     main .job-2:hover {
-      background: url(/dist/images/recent/Sitadel.png);
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/dist/images/recent/Sitadel.png);
+      background: url(/images/recent/Sitadel.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/Sitadel.png);
       background-size: cover; }
   main .job-3 {
     grid-area: job3;
-    background: url(/dist/images/recent/game.png);
+    background: url(/images/recent/game.png);
     background-size: cover; }
     main .job-3:hover {
-      background: url(/dist/images/recent/game.png);
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/dist/images/recent/game.png);
+      background: url(/images/recent/game.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/game.png);
       background-size: cover; }
   main .job-4 {
     grid-area: job4;
-    background: url(/dist/images/recent/bti.png);
+    background: url(/images/recent/bti.png);
     background-size: cover; }
     main .job-4:hover {
-      background: url(/dist/images/recent/bti.png);
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/dist/images/recent/bti.png);
+      background: url(/images/recent/bti.png);
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.75) 100%), url(/images/recent/bti.png);
       background-size: cover; }
   main h6 {
     font-size: 1rem;
