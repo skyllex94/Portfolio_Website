@@ -141,16 +141,16 @@ main {
 
   .job-1 {
     grid-area: job1;
-    background: url(/images/recent/Boxing-pro1.png);
+    background: url(/dist/images/recent/Boxing-pro1.png);
 
     &:hover {
-      background: url(/images/recent/Boxing-pro1.png);
+      background: url(dist/images/recent/Boxing-pro1.png);
       background-image: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0.5) 0%,
           rgba(0, 0, 0, 0.75) 100%
         ),
-        url(/images/recent/Boxing-pro1.png);
+        url(/dist/images/recent/Boxing-pro1.png);
       background-size: cover;
     }
     background-size: cover;
@@ -158,16 +158,16 @@ main {
 
   .job-2 {
     grid-area: job2;
-    background: url(/images/recent/Sitadel.png);
+    background: url(/dist/images/recent/Sitadel.png);
 
     &:hover {
-      background: url(/images/recent/Sitadel.png);
+      background: url(/dist/images/recent/Sitadel.png);
       background-image: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0.5) 0%,
           rgba(0, 0, 0, 0.75) 100%
         ),
-        url(/images/recent/Sitadel.png);
+        url(/dist/images/recent/Sitadel.png);
       background-size: cover;
     }
     background-size: cover;
@@ -175,16 +175,16 @@ main {
 
   .job-3 {
     grid-area: job3;
-    background: url(/images/recent/game.png);
+    background: url(/dist/images/recent/game.png);
 
     &:hover {
-      background: url(/images/recent/game.png);
+      background: url(/dist/images/recent/game.png);
       background-image: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0.5) 0%,
           rgba(0, 0, 0, 0.75) 100%
         ),
-        url(/images/recent/game.png);
+        url(/dist/images/recent/game.png);
       background-size: cover;
     }
     background-size: cover;
@@ -192,16 +192,16 @@ main {
 
   .job-4 {
     grid-area: job4;
-    background: url(/images/recent/bti.png);
+    background: url(/dist/images/recent/bti.png);
 
     &:hover {
-      background: url(/images/recent/bti.png);
+      background: url(/dist/images/recent/bti.png);
       background-image: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0.5) 0%,
           rgba(0, 0, 0, 0.75) 100%
         ),
-        url(/images/recent/bti.png);
+        url(/dist/images/recent/bti.png);
       background-size: cover;
     }
     background-size: cover;
